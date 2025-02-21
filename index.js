@@ -15,6 +15,7 @@ const bcrypt = require('bcrypt-nodejs');
 
 // middleware
 app.use(express.json())
+app.use(cors());
 
 app.use((req, res, next) => {
   console.log(req.path, req.method)
@@ -22,7 +23,7 @@ app.use((req, res, next) => {
 })
 
 // routes
-app.use('/api/workouts', workoutRoutes)
+//app.use('/api/workouts', workoutRoutes)
 app.use('/api/user', userRoutes)
 
 // connect to db
